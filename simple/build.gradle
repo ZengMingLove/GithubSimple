@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'//添加
+
 
 android {
     compileSdkVersion 25
@@ -28,4 +30,14 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.3.1'
     testCompile 'junit:junit:4.12'
+}
+
+//添加
+publish {
+    userOrg = 'zengming' //bintray.com用户名
+    groupId = 'com.zmProject' //jcenter上的路径
+    artifactId = 'simple' //项目名称
+    publishVersion = '1.0.0' //版本号
+    desc = 'A project that contains a custom SwitchVIew' //描述，不重要
+    website = 'https://github.com/ZengMingLove/GithubSimple' //网站
 }
